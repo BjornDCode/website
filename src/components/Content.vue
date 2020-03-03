@@ -15,13 +15,23 @@
     highlight.registerLanguage('css', css)
     highlight.registerLanguage('php', php)
 
-    highlight.initHighlightingOnLoad()
-
     export default {
         props: {
             string: {
                 type: String,
                 required: true,
+            },
+        },
+
+        watch: {
+            string: {
+                immediate: true,
+                handler() {
+                    this.$nextTick(() => {
+                        highlight.initHighlighting.called = false
+                        highlight.initHighlighting()
+                    })
+                },
             },
         },
     }
