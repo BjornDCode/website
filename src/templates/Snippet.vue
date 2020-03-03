@@ -1,6 +1,6 @@
 <template>
     <Layout>
-        <Title>{{ snippet.title }}</Title>
+        <Title class="mb-8">{{ snippet.title }}</Title>
         <Content :string="snippet.content" />
     </Layout>
 </template>

@@ -5,16 +5,17 @@
                 type: String,
                 default: 'h1',
             },
+            class: {
+                type: String,
+                default: '',
+            },
         },
 
         render(createElement) {
             return createElement(
                 this.component,
                 {
-                    attrs: {
-                        class:
-                            'text-4xl tracking-tight leading-10 font-extrabold text-gray-900',
-                    },
+                    class: `text-4xl tracking-tight leading-10 font-extrabold text-gray-900 ${this.class}`,
                 },
                 this.$scopedSlots.default()
             )

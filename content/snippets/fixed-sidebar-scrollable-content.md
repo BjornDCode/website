@@ -1,5 +1,4 @@
 ---
-id: 1
 title: Fixed sidebar, Scrollable content
 slug: fixed-sidebar-scrollable-content
 category: Tailwind
