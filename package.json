@@ -13,6 +13,7 @@
         "highlight.js": "^9.18.1"
     },
     "devDependencies": {
-        "gridsome-plugin-tailwindcss": "^2.2.36"
+        "gridsome-plugin-tailwindcss": "^2.2.36",
+        "lodash": "^4.17.15"
     }
 }
