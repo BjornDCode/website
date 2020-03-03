@@ -50,20 +50,26 @@
                 </div>
             </nav>
         </aside>
-        <div>
-            <button type="button" @click="toggle" class="md:hidden">
-                <span
-                    class="block w-8 bg-gray-600 rounded"
-                    style="height: 0.1875rem; margin-bottom: 0.375rem;"
-                ></span>
-                <span
-                    class="block w-8 bg-gray-600 rounded"
-                    style="height: 0.1875rem; margin-bottom: 0.375rem;"
-                ></span>
-                <span class="block w-6 bg-gray-600 rounded" style="height: 0.1875rem;"></span>
-            </button>
+        <div class="w-full">
+            <div class="p-4 md:hidden">
+                <button type="button" @click="toggle">
+                    <span
+                        class="block w-8 bg-gray-600 rounded"
+                        style="height: 0.1875rem; margin-bottom: 0.375rem;"
+                    ></span>
+                    <span
+                        class="block w-8 bg-gray-600 rounded"
+                        style="height: 0.1875rem; margin-bottom: 0.375rem;"
+                    ></span>
+                    <span class="block w-6 bg-gray-600 rounded" style="height: 0.1875rem;"></span>
+                </button>
+            </div>
 
-            <main>// Content</main>
+            <main class="w-full">
+                <div class="p-4 md:p-8 lg:max-w-xl lg:mx-auto">
+                    <slot />
+                </div>
+            </main>
         </div>
     </div>
 </template>
