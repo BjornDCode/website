@@ -10,8 +10,18 @@
             >Bjørn</g-link>
 
             <nav class="mt-8">
-                <g-link to="/snippets" class="block text-sm text-gray-600 font-medium mb-2">Snippets</g-link>
-                <g-link to="/meta" class="block text-sm text-gray-600 font-medium mb-2">Meta</g-link>
+                <div class="mb-2">
+                    <g-link
+                        to="/snippets"
+                        class="text-sm text-gray-600 font-medium hover:underline"
+                    >Snippets</g-link>
+                </div>
+                <div>
+                    <g-link
+                        to="/meta"
+                        class="text-sm text-gray-600 font-medium hover:underline mb-2"
+                    >Meta</g-link>
+                </div>
             </nav>
         </aside>
         <div>
