@@ -3,6 +3,20 @@
 </template>
 
 <script>
+    import highlight from 'highlight.js/lib/highlight'
+    import javascript from 'highlight.js/lib/languages/javascript'
+    import xml from 'highlight.js/lib/languages/xml'
+    import css from 'highlight.js/lib/languages/css'
+    import php from 'highlight.js/lib/languages/php'
+    import 'highlight.js/styles/github.css'
+
+    highlight.registerLanguage('javascript', javascript)
+    highlight.registerLanguage('xml', xml)
+    highlight.registerLanguage('css', css)
+    highlight.registerLanguage('php', php)
+
+    highlight.initHighlightingOnLoad()
+
     export default {
         props: {
             string: {
@@ -58,7 +72,7 @@
     }
 
     .content pre code {
-        @apply block bg-gray-900 text-gray-300 p-4;
+        @apply block bg-gray-100 text-gray-300 p-4;
     }
 
     .content blockquote {

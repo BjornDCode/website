@@ -5,7 +5,7 @@
                 type: String,
                 default: 'h1',
             },
-            class: {
+            classes: {
                 type: String,
                 default: '',
             },
@@ -15,7 +15,7 @@
             return createElement(
                 this.component,
                 {
-                    class: `text-4xl tracking-tight leading-10 font-extrabold text-gray-900 ${this.class}`,
+                    class: `text-4xl tracking-tight leading-10 font-extrabold text-gray-900 ${this.classes}`,
                 },
                 this.$scopedSlots.default()
             )
