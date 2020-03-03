@@ -15,7 +15,7 @@
             </nav>
         </aside>
         <div>
-            <button type="button" @click="toggle">
+            <button type="button" @click="toggle" class="md:hidden">
                 <span
                     class="block w-8 bg-gray-600 rounded"
                     style="height: 0.1875rem; margin-bottom: 0.375rem;"
