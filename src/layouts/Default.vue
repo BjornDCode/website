@@ -1,7 +1,7 @@
 <template>
     <div class="flex">
         <aside
-            class="w-3/5 h-screen sticky top-0 border-r border-gray-200 p-8"
+            class="w-3/5 h-screen sticky top-0 border-r border-gray-200 p-8 md:block md:w-48 lg:w-64"
             :class="{ 'hidden': !open }"
         >
             <g-link
