@@ -1,5 +1,7 @@
 <template>
-    <Layout>{{ snippet.title }}</Layout>
+    <Layout>
+        <Title>{{ snippet.title }}</Title>
+    </Layout>
 </template>
 
 <page-query>
@@ -12,7 +14,13 @@
 </page-query>
 
 <script>
+    import Title from '@/components/Title'
+
     export default {
+        components: {
+            Title,
+        },
+
         computed: {
             snippet() {
                 return this.$page.snippet
