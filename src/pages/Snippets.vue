@@ -37,11 +37,6 @@
             Title,
         },
 
-        mounted() {
-            console.log(this.snippets)
-            console.log(this.categories)
-        },
-
         computed: {
             snippets() {
                 return this.$page.allSnippet.edges.map(edge => edge.node)
