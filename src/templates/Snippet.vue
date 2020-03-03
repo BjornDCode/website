@@ -1,6 +1,7 @@
 <template>
     <Layout>
         <Title>{{ snippet.title }}</Title>
+        <Content :string="snippet.content" />
     </Layout>
 </template>
 
@@ -15,16 +16,24 @@
 
 <script>
     import Title from '@/components/Title'
+    import Content from '@/components/Content'
 
     export default {
         components: {
             Title,
+            Content,
         },
 
         computed: {
             snippet() {
                 return this.$page.snippet
             },
+        },
+
+        metaInfo() {
+            return {
+                title: this.$page.snippet.title,
+            }
         },
     }
 </script>
