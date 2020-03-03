@@ -10,12 +10,22 @@
             >Bjørn</g-link>
 
             <nav class="mt-8">
-                <g-link to="/snippets" class="block text-sm text-gray-700 mb-2">Snippets</g-link>
-                <g-link to="/meta" class="block text-sm text-gray-700 mb-2">Meta</g-link>
+                <g-link to="/snippets" class="block text-sm text-gray-600 font-medium mb-2">Snippets</g-link>
+                <g-link to="/meta" class="block text-sm text-gray-600 font-medium mb-2">Meta</g-link>
             </nav>
         </aside>
         <div>
-            <button type="button" @click="toggle">Toggle</button>
+            <button type="button" @click="toggle">
+                <span
+                    class="block w-8 bg-gray-600 rounded"
+                    style="height: 0.1875rem; margin-bottom: 0.375rem;"
+                ></span>
+                <span
+                    class="block w-8 bg-gray-600 rounded"
+                    style="height: 0.1875rem; margin-bottom: 0.375rem;"
+                ></span>
+                <span class="block w-6 bg-gray-600 rounded" style="height: 0.1875rem;"></span>
+            </button>
 
             <main>// Content</main>
         </div>
