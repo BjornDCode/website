@@ -1,51 +1,39 @@
 <template>
-    <div class="layout">
-        <header class="header">
-            <strong>
-                <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-            </strong>
-            <nav class="nav">
-                <g-link class="nav__link" to="/">Home</g-link>
-                <g-link class="nav__link" to="/about/">About</g-link>
+    <div class="flex">
+        <aside
+            class="w-3/5 h-screen sticky top-0 border-r border-gray-200 p-8"
+            :class="{ 'hidden': !open }"
+        >
+            <g-link
+                to="/"
+                class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900"
+            >Bjørn</g-link>
+
+            <nav class="mt-8">
+                <g-link to="/snippets" class="block text-sm text-gray-700 mb-2">Snippets</g-link>
+                <g-link to="/meta" class="block text-sm text-gray-700 mb-2">Meta</g-link>
             </nav>
-        </header>
-        <slot />
+        </aside>
+        <div>
+            <button type="button" @click="toggle">Toggle</button>
+
+            <main>// Content</main>
+        </div>
     </div>
 </template>
 
-<static-query>
-query {
-  metadata {
-    siteName
-  }
-}
-</static-query>
+<script>
+    export default {
+        data() {
+            return {
+                open: false,
+            }
+        },
 
-<style>
-    body {
-        font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
-            Roboto, 'Helvetica Neue', Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        line-height: 1.5;
+        methods: {
+            toggle() {
+                this.open = !this.open
+            },
+        },
     }
-
-    .layout {
-        max-width: 760px;
-        margin: 0 auto;
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 20px;
-        height: 80px;
-    }
-
-    .nav__link {
-        margin-left: 20px;
-    }
-</style>
+</script>
