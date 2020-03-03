@@ -6,6 +6,18 @@
 
 module.exports = {
     siteName: 'Bjørn',
-    plugins: [{ use: 'gridsome-plugin-tailwindcss' }],
-    titleTemplate: '%s'
+    titleTemplate: '%s',
+    plugins: [
+        { use: 'gridsome-plugin-tailwindcss' },
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                typeName: 'Snippet',
+                path: './content/snippets/**/*.md'
+            }
+        }
+    ],
+    templates: {
+        Snippet: '/snippets/:slug'
+    }
 }
