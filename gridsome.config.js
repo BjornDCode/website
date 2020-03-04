@@ -15,9 +15,17 @@ module.exports = {
                 typeName: 'Snippet',
                 path: './content/snippets/**/*.md'
             }
+        },
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                typeName: 'Link',
+                path: './content/links/**/*.md'
+            }
         }
     ],
     templates: {
-        Snippet: '/snippets/:slug'
+        Snippet: '/snippets/:slug',
+        Link: '/links/:slug'
     }
 }
