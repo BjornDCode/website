@@ -2,6 +2,7 @@
 title: Array to object
 slug: array-to-object
 category: Javascript
+published_at: 2020-03-03
 ---
 
 A small helper function to create an object from an array of objects.

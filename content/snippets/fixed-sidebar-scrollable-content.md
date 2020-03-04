@@ -2,6 +2,7 @@
 title: Fixed sidebar - scrollable content
 slug: fixed-sidebar-scrollable-content
 category: Tailwind
+published_at: 2020-03-04
 ---
 
 A simple Tailwind layout to create a sticky sidebar and scrollable content next to it.
