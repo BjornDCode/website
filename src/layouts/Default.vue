@@ -13,6 +13,12 @@
                 <nav class="mt-8">
                     <div class="mb-2">
                         <g-link
+                            to="/links"
+                            class="text-sm text-gray-600 font-medium hover:underline"
+                        >Links</g-link>
+                    </div>
+                    <div class="mb-2">
+                        <g-link
                             to="/snippets"
                             class="text-sm text-gray-600 font-medium hover:underline"
                         >Snippets</g-link>
