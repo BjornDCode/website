@@ -1,6 +1,6 @@
 ---
-title: Capitalize string in Javascript
-slug: capitalize-string-in-javascript
+title: Capitalize string
+slug: capitalize-string
 category: Javascript
 ---
 
