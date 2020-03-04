@@ -82,7 +82,7 @@
     }
 
     .content pre code {
-        @apply block bg-gray-100 text-gray-300 leading-loose p-12 -mx-8;
+        @apply block bg-gray-100 text-gray-700 leading-loose p-12 -mx-8;
     }
 
     .content blockquote {
