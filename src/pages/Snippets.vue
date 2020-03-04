@@ -37,6 +37,10 @@
             Title,
         },
 
+        metaInfo: {
+            title: 'Snippets',
+        },
+
         computed: {
             snippets() {
                 return this.$page.allSnippet.edges.map(edge => edge.node)
