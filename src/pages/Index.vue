@@ -1,12 +1,32 @@
 <template>
     <Layout>
-        <h1>Hello, world!</h1>
-
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur excepturi labore tempore expedita, et iste tenetur suscipit explicabo! Dolores, aperiam non officia eos quod asperiores</p>
-
-        <p class="home-links">
-            <a href="https://gridsome.org/docs/" target="_blank" rel="noopener">Gridsome Docs</a>
-            <a href="https://github.com/gridsome/gridsome" target="_blank" rel="noopener">GitHub</a>
-        </p>
+        <Title>Welcome</Title>
+        <ul class="mt-8">
+            <li>
+                <g-link to="/concepts" class="underline">Concepts</g-link>
+            </li>
+            <li>
+                <g-link to="/links" class="underline">Links</g-link>
+            </li>
+            <li>
+                <g-link to="/thoughts" class="underline">Thoughts</g-link>
+            </li>
+            <li>
+                <g-link to="/snippets" class="underline">Snippets</g-link>
+            </li>
+            <li>
+                <g-link to="/meta" class="underline">Meta</g-link>
+            </li>
+        </ul>
     </Layout>
 </template>
+
+<script>
+    import Title from '@/components/Title'
+
+    export default {
+        components: {
+            Title,
+        },
+    }
+</script>
