@@ -1,4 +1,5 @@
 ---
+id: page-builder
 title: Page Builder
 slug: page-builder
 category: concepts

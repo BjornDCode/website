@@ -29,7 +29,8 @@ module.exports = {
                 typeName: 'Category',
                 path: './content/categories/**/*.md',
                 refs: {
-                    series: 'Series'
+                    series: 'Series',
+                    articles: 'Article'
                 }
             }
         },
@@ -39,7 +40,19 @@ module.exports = {
                 typeName: 'Series',
                 path: './content/series/**/*.md',
                 refs: {
-                    category: 'Category'
+                    category: 'Category',
+                    articles: 'Article'
+                }
+            }
+        },
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                typeName: 'Article',
+                path: './content/articles/**/*.md',
+                refs: {
+                    category: 'Category',
+                    series: 'Series'
                 }
             }
         }

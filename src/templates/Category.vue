@@ -3,7 +3,7 @@
         <Title class="mb-8">{{ category.title }}</Title>
         <Content :string="category.content" />
 
-        <div class="mt-8">
+        <div class="mt-8" v-if="series.length">
             <h2 class="text-xl tracking-tight leading-10 font-extrabold text-gray-900">Series</h2>
             <ul>
                 <li v-for="serie in series" :key="serie.slug">
@@ -12,7 +12,7 @@
             </ul>
         </div>
 
-        <div class="mt-8">
+        <div class="mt-8" v-if="articles.length">
             <h2
                 class="text-xl tracking-tight leading-10 font-extrabold text-gray-900"
             >Single Articles</h2>
@@ -26,9 +26,9 @@
             title
             content
             belongsTo {
-            edges {
-                node {
-                    ... on Series {
+                edges {
+                    node {
+                        ... on Series {
                             title
                             slug
                         }
@@ -56,6 +56,10 @@
 
             series() {
                 return this.category.belongsTo.edges.map(edge => edge.node)
+            },
+
+            articles() {
+                return []
             },
         },
 
