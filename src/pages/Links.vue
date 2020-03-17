@@ -8,7 +8,7 @@
             class="border-b border-gray-300 pb-12 mb-12 last:border-b-0 last:pb-0 last:mb-0"
         >
             <h2
-                class="text-2xl tracking-tight leading-none font-extrabold text-gray-900 mb-4"
+                class="text-2xl tracking-tight leading-none font-extrabold text-gray-900 mb-6"
             >{{ link.title }}</h2>
             <Content :string="link.content" />
             <a

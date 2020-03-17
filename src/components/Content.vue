@@ -39,13 +39,13 @@
 
 <style>
     .content {
-        @apply text-lg text-gray-700 leading-normal;
+        @apply text-lg text-gray-800 leading-normal;
     }
 
     .content > * + *,
     .content li + li,
     .content li > p + p {
-        @apply mt-6;
+        @apply mt-8;
     }
 
     .content h1,
