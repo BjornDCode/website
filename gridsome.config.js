@@ -61,6 +61,7 @@ module.exports = {
         Snippet: '/snippets/:slug',
         Link: '/links/:slug',
         Category: '/:slug',
-        Series: '/series/:slug'
+        Series: '/series/:slug',
+        Article: '/articles/:slug'
     }
 }
