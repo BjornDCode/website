@@ -16,6 +16,11 @@
             <h2
                 class="text-xl tracking-tight leading-10 font-extrabold text-gray-900"
             >Single Articles</h2>
+            <ul>
+                <li v-for="article in articles" :key="article.slug">
+                    <g-link :to="`/articles/${article.slug}`" class="underline">{{ article.title }}</g-link>
+                </li>
+            </ul>
         </div>
     </Layout>
 </template>
@@ -28,7 +33,12 @@
             belongsTo {
                 edges {
                     node {
+                        __typename
                         ... on Series {
+                            title
+                            slug
+                        }
+                        ... on Article {
                             title
                             slug
                         }
@@ -55,11 +65,15 @@
             },
 
             series() {
-                return this.category.belongsTo.edges.map(edge => edge.node)
+                return this.category.belongsTo.edges
+                    .map(edge => edge.node)
+                    .filter(node => node.__typename === 'Series')
             },
 
             articles() {
-                return []
+                return this.category.belongsTo.edges
+                    .map(edge => edge.node)
+                    .filter(node => node.__typename === 'Article')
             },
         },
 
