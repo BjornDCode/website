@@ -2,11 +2,21 @@
     <Layout>
         <Title class="mb-8">{{ category.title }}</Title>
         <Content :string="category.content" />
-        <ul class="mt-8">
-            <li v-for="serie in series" :key="serie.slug">
-                <g-link :to="`/series/${serie.slug}`" class="underline">{{ serie.title }}</g-link>
-            </li>
-        </ul>
+
+        <div class="mt-8">
+            <h2 class="text-xl tracking-tight leading-10 font-extrabold text-gray-900">Series</h2>
+            <ul>
+                <li v-for="serie in series" :key="serie.slug">
+                    <g-link :to="`/series/${serie.slug}`" class="underline">{{ serie.title }}</g-link>
+                </li>
+            </ul>
+        </div>
+
+        <div class="mt-8">
+            <h2
+                class="text-xl tracking-tight leading-10 font-extrabold text-gray-900"
+            >Single Articles</h2>
+        </div>
     </Layout>
 </template>
 
