@@ -22,10 +22,32 @@ module.exports = {
                 typeName: 'Link',
                 path: './content/links/**/*.md'
             }
+        },
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                typeName: 'Category',
+                path: './content/categories/**/*.md',
+                refs: {
+                    series: 'Series'
+                }
+            }
+        },
+        {
+            use: '@gridsome/source-filesystem',
+            options: {
+                typeName: 'Series',
+                path: './content/series/**/*.md',
+                refs: {
+                    category: 'Category'
+                }
+            }
         }
     ],
     templates: {
         Snippet: '/snippets/:slug',
-        Link: '/links/:slug'
+        Link: '/links/:slug',
+        Category: '/:slug',
+        Series: '/series/:slug'
     }
 }
