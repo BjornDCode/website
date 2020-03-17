@@ -8,6 +8,14 @@ module.exports = {
     siteName: 'Bjørn',
     titleTemplate: '%s',
     plugins: [
+        {
+            use: 'gridsome-plugin-fathom',
+            options: {
+                siteId: 'BIHBRBPS',
+                host: 'bjornlindholm.com',
+                debug: false
+            }
+        },
         { use: 'gridsome-plugin-tailwindcss' },
         {
             use: '@gridsome/source-filesystem',
