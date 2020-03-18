@@ -2,7 +2,7 @@
 title: Data Visualisation with SVG's and Vue
 slug: data-visualisation-with-svgs-and-vue
 category: projects
-published_at: 2020-03-18
+published_at: 2018-12-06
 ---
 
 Recently I've been playing around with manipulating SVG's directly with Vue. This resulted in a project where I visualise some data related to air travel on a world map.
