@@ -21,6 +21,7 @@
                     slug
                     content
                     url
+                    published_at
                 }
             }
         }
@@ -43,7 +44,19 @@
 
         computed: {
             links() {
-                return this.$page.allLink.edges.map(edge => edge.node)
+                return this.$page.allLink.edges
+                    .map(edge => edge.node)
+                    .sort((a, b) => {
+                        if (a.published_at < b.published_at) {
+                            return 1
+                        }
+
+                        if (a.published_at > b.published_at) {
+                            return -1
+                        }
+
+                        return 0
+                    })
             },
         },
     }
