@@ -1,11 +1,11 @@
 module.exports = {
     theme: {
-        extend: {}
+        extend: {},
     },
     variants: {
         borderWidth: ['responsive', 'last'],
         margin: ['responsive', 'last'],
-        padding: ['responsive', 'last']
+        padding: ['responsive', 'last'],
     },
-    plugins: []
+    plugins: [require('@tailwindcss/typography')],
 }
