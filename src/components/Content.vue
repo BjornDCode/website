@@ -36,3 +36,10 @@
         },
     }
 </script>
+
+<style>
+    .prose pre {
+        color: theme('colors.gray.800');
+        background-color: theme('colors.gray.100');
+    }
+</style>
