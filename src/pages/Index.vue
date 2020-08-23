@@ -3,9 +3,12 @@
         <Title>Welcome</Title>
         <ul class="mt-8">
             <li v-for="post in posts" :key="post.slug">
-                <g-link :to="post.url" class="underline">{{
-                    post.title
-                }}</g-link>
+                <g-link :to="post.url" class="underline"
+                    >{{ post.title }}
+                    <span class="text-sm text-gray-600"
+                        >({{ post.published_at | date }})</span
+                    ></g-link
+                >
             </li>
         </ul>
     </Layout>

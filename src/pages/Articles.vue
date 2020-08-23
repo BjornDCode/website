@@ -4,9 +4,12 @@
 
         <ul>
             <li v-for="article in articles" :key="article.slug">
-                <g-link :to="`/articles/${article.slug}`" class="underline">{{
-                    article.title
-                }}</g-link>
+                <g-link :to="`/articles/${article.slug}`" class="underline"
+                    >{{ article.title }}
+                    <span class="text-sm text-gray-600"
+                        >({{ article.published_at | date }})</span
+                    ></g-link
+                >
             </li>
         </ul>
     </Layout>

@@ -1,6 +1,9 @@
 <template>
     <Layout>
-        <Title class="mb-8">{{ snippet.title }}</Title>
+        <Title class="mb-4">{{ snippet.title }}</Title>
+        <span class="block mb-6 text-sm text-gray-700">{{
+            snippet.published_at | date
+        }}</span>
         <Content :string="snippet.content" />
     </Layout>
 </template>
@@ -10,6 +13,7 @@
         snippet(path: $path){
             title
             content
+            published_at
         }
     }
 </page-query>

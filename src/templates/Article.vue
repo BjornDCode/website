@@ -1,6 +1,9 @@
 <template>
     <Layout>
-        <Title class="mb-8">{{ article.title }}</Title>
+        <Title class="mb-4">{{ article.title }}</Title>
+        <span class="block mb-6 text-sm text-gray-700">{{
+            article.published_at | date
+        }}</span>
         <Content :string="article.content" />
     </Layout>
 </template>
@@ -10,6 +13,7 @@
         article(path: $path){
             title
             content
+            published_at
         }
     }
 </page-query>
