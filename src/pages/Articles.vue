@@ -1,11 +1,11 @@
 <template>
     <Layout>
-        <Title classes="mb-8">Links</Title>
+        <Title classes="mb-8">Articles</Title>
 
         <ul>
-            <li v-for="link in links" :key="link.slug">
-                <g-link :to="`/links/${link.slug}`" class="underline">{{
-                    link.title
+            <li v-for="article in articles" :key="article.slug">
+                <g-link :to="`/articles/${article.slug}`" class="underline">{{
+                    article.title
                 }}</g-link>
             </li>
         </ul>
@@ -14,13 +14,13 @@
 
 <page-query>
     query {
-        allLink {
+        allArticle {
             edges {
                 node {
                     title
                     slug
                     content
-                    url
+                    published_at
                 }
             }
         }
@@ -42,8 +42,8 @@
         },
 
         computed: {
-            links() {
-                return this.$page.allLink.edges.map(edge => edge.node)
+            articles() {
+                return this.$page.allArticle.edges.map(edge => edge.node)
             },
         },
     }

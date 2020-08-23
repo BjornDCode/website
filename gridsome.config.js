@@ -13,23 +13,23 @@ module.exports = {
             options: {
                 siteId: 'BIHBRBPS',
                 host: 'bjornlindholm.com',
-                debug: false
-            }
+                debug: false,
+            },
         },
         { use: 'gridsome-plugin-tailwindcss' },
         {
             use: '@gridsome/source-filesystem',
             options: {
                 typeName: 'Snippet',
-                path: './content/snippets/**/*.md'
-            }
+                path: './content/snippets/**/*.md',
+            },
         },
         {
             use: '@gridsome/source-filesystem',
             options: {
                 typeName: 'Link',
-                path: './content/links/**/*.md'
-            }
+                path: './content/links/**/*.md',
+            },
         },
         {
             use: '@gridsome/source-filesystem',
@@ -38,9 +38,9 @@ module.exports = {
                 path: './content/categories/**/*.md',
                 refs: {
                     series: 'Series',
-                    articles: 'Article'
-                }
-            }
+                    articles: 'Article',
+                },
+            },
         },
         {
             use: '@gridsome/source-filesystem',
@@ -49,9 +49,9 @@ module.exports = {
                 path: './content/series/**/*.md',
                 refs: {
                     category: 'Category',
-                    articles: 'Article'
-                }
-            }
+                    articles: 'Article',
+                },
+            },
         },
         {
             use: '@gridsome/source-filesystem',
@@ -60,16 +60,15 @@ module.exports = {
                 path: './content/articles/**/*.md',
                 refs: {
                     category: 'Category',
-                    series: 'Series'
-                }
-            }
-        }
+                    series: 'Series',
+                },
+            },
+        },
     ],
     templates: {
         Snippet: '/snippets/:slug',
         Link: '/links/:slug',
         Category: '/:slug',
-        Series: '/series/:slug',
-        Article: '/articles/:slug'
-    }
+        Article: '/articles/:slug',
+    },
 }

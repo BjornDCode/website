@@ -3,22 +3,19 @@
         <Title class="mb-8">{{ category.title }}</Title>
         <Content :string="category.content" />
 
-        <div class="mt-8" v-if="series.length">
-            <h2 class="text-xl tracking-tight leading-10 font-extrabold text-gray-900">Series</h2>
-            <ul>
-                <li v-for="serie in series" :key="serie.slug">
-                    <g-link :to="`/series/${serie.slug}`" class="underline">{{ serie.title }}</g-link>
-                </li>
-            </ul>
-        </div>
-
         <div class="mt-8" v-if="articles.length">
             <h2
                 class="text-xl tracking-tight leading-10 font-extrabold text-gray-900"
-            >Single Articles</h2>
+            >
+                Articles
+            </h2>
             <ul>
                 <li v-for="article in articles" :key="article.slug">
-                    <g-link :to="`/articles/${article.slug}`" class="underline">{{ article.title }}</g-link>
+                    <g-link
+                        :to="`/articles/${article.slug}`"
+                        class="underline"
+                        >{{ article.title }}</g-link
+                    >
                 </li>
             </ul>
         </div>
@@ -34,10 +31,6 @@
                 edges {
                     node {
                         __typename
-                        ... on Series {
-                            title
-                            slug
-                        }
                         ... on Article {
                             title
                             slug

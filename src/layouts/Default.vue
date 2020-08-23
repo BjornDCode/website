@@ -2,44 +2,44 @@
     <div class="flex">
         <aside
             class="w-3/5 h-screen sticky top-0 border-r border-gray-200 flex flex-col justify-between p-8 md:flex md:w-48 lg:w-64"
-            :class="{ 'hidden': !open }"
+            :class="{ hidden: !open }"
         >
             <div>
                 <g-link
                     to="/"
                     class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900"
-                >Bjørn</g-link>
+                    >Bjørn</g-link
+                >
 
                 <nav class="mt-8">
                     <div class="mb-2">
                         <g-link
-                            to="/concepts"
+                            to="/articles"
                             class="text-sm text-gray-600 font-medium hover:underline"
-                        >Concepts</g-link>
+                            >Articles</g-link
+                        >
                     </div>
                     <div class="mb-2">
                         <g-link
                             to="/links"
                             class="text-sm text-gray-600 font-medium hover:underline"
-                        >Links</g-link>
+                            >Links</g-link
+                        >
                     </div>
-                    <div class="mb-2">
-                        <g-link
-                            to="/thoughts"
-                            class="text-sm text-gray-600 font-medium hover:underline"
-                        >Thoughts</g-link>
-                    </div>
+
                     <div class="mb-2">
                         <g-link
                             to="/snippets"
                             class="text-sm text-gray-600 font-medium hover:underline"
-                        >Snippets</g-link>
+                            >Snippets</g-link
+                        >
                     </div>
                     <div>
                         <g-link
                             to="/meta"
                             class="text-sm text-gray-600 font-medium hover:underline mb-2"
-                        >Meta</g-link>
+                            >Meta</g-link
+                        >
                     </div>
                 </nav>
             </div>
@@ -50,21 +50,24 @@
                         class="text-xs text-gray-700 hover:underline"
                         target="_blank"
                         href="https://twitter.com/bjornlindholmdk"
-                    >Twitter</a>
+                        >Twitter</a
+                    >
                 </div>
                 <div>
                     <a
                         class="text-xs text-gray-700 hover:underline"
                         target="_blank"
                         href="https://www.instagram.com/bjornhansendk/"
-                    >Instagram</a>
+                        >Instagram</a
+                    >
                 </div>
                 <div>
                     <a
                         class="text-xs text-gray-700 hover:underline"
                         target="_blank"
                         href="https://dev.to/bjornlindholmdk"
-                    >Dev.to</a>
+                        >Dev.to</a
+                    >
                 </div>
             </nav>
         </aside>
@@ -79,7 +82,10 @@
                         class="block w-8 bg-gray-600 rounded"
                         style="height: 0.1875rem; margin-bottom: 0.375rem;"
                     ></span>
-                    <span class="block w-6 bg-gray-600 rounded" style="height: 0.1875rem;"></span>
+                    <span
+                        class="block w-6 bg-gray-600 rounded"
+                        style="height: 0.1875rem;"
+                    ></span>
                 </button>
             </div>
 
