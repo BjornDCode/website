@@ -1,5 +1,5 @@
 <template>
-    <div class="prose lg:prose-xl" v-html="string" />
+    <div class="prose lg:prose-lg" v-html="string" />
 </template>
 
 <script>

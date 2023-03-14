@@ -69,6 +69,14 @@
                         >Dev.to</a
                     >
                 </div>
+                <div>
+                    <a
+                        class="text-xs text-gray-700 hover:underline"
+                        target="_blank"
+                        href="https://read.cv/bjornlindholm"
+                        >Read.cv</a
+                    >
+                </div>
             </nav>
         </aside>
         <div class="w-full">
@@ -76,15 +84,15 @@
                 <button type="button" @click="toggle">
                     <span
                         class="block w-8 bg-gray-600 rounded"
-                        style="height: 0.1875rem; margin-bottom: 0.375rem;"
+                        style="height: 0.1875rem; margin-bottom: 0.375rem"
                     ></span>
                     <span
                         class="block w-8 bg-gray-600 rounded"
-                        style="height: 0.1875rem; margin-bottom: 0.375rem;"
+                        style="height: 0.1875rem; margin-bottom: 0.375rem"
                     ></span>
                     <span
                         class="block w-6 bg-gray-600 rounded"
-                        style="height: 0.1875rem;"
+                        style="height: 0.1875rem"
                     ></span>
                 </button>
             </div>
@@ -99,17 +107,17 @@
 </template>
 
 <script>
-    export default {
-        data() {
-            return {
-                open: false,
-            }
-        },
+export default {
+    data() {
+        return {
+            open: false,
+        };
+    },
 
-        methods: {
-            toggle() {
-                this.open = !this.open
-            },
+    methods: {
+        toggle() {
+            this.open = !this.open;
         },
-    }
+    },
+};
 </script>
